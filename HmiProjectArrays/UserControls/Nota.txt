@@ -1,0 +1,7 @@
+Si se usa la funcion GetElementByIndex retorna un símbolo, pero solo de lectura
+Para poder escribir, el user control contiene una estructura auxiliar que se copia de la estructura parámetro.
+Esta estructura auxiliar es la que se usa con la función SetElementByIndex para escribir de vuelta en el array.
+
+El símbolo asociado al Toggle Switch usa el símbolo de la estructura auxiliar. Esto se hace porque los controles 
+para símbolos booleandos (buttons, switchs, ...) el símbolo es bidireccional y daría error de escritura con la estructura 
+del parámetro.

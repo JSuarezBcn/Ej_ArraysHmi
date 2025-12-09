@@ -1,0 +1,81 @@
+{
+  "parameters": [
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setEstructura",
+      "propertyGetterName": "getEstructura",
+      "refTo": "",
+      "name": "data-tchmi-estructura",
+      "displayName": "estructura",
+      "visible": true,
+      "type": "tchmi:server#/definitions/ADS-PLC1.ST_Datos",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "estructura"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "defaultValueInternal": {
+        "bBool": null,
+        "nNumber": 0,
+        "rValue1": 0.0
+      },
+      "requiredOnCompile": false,
+      "bindable": false,
+      "propertySetterName": "setEstructuraAux",
+      "propertyGetterName": "getEstructuraAux",
+      "refTo": "",
+      "name": "data-tchmi-estructuraaux",
+      "displayName": "estructuraAux",
+      "visible": false,
+      "type": "tchmi:server#/definitions/ADS-PLC1.ST_Datos",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "estructuraAux"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "defaultValueInternal": 0.0,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setIndice",
+      "propertyGetterName": "getIndice",
+      "refTo": "",
+      "name": "data-tchmi-indice",
+      "displayName": "indice",
+      "visible": true,
+      "type": "tchmi:general#/definitions/Number",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "indice"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setArray",
+      "propertyGetterName": "getArray",
+      "refTo": "",
+      "name": "data-tchmi-array",
+      "displayName": "array",
+      "visible": true,
+      "type": "tchmi:server#/definitions/ADS-PLC1.ARRAY_0..9_OF-ST_Datos",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "array"
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Ej_ArraysHmi/Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.258/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

@@ -1,0 +1,203 @@
+<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-mode="Content" data-tchmi-min-width="100" data-tchmi-min-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-min-height="100" data-tchmi-min-height-unit="%">
+  <div id="TcHmiObjectBrowser_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiObjectBrowser" data-tchmi-height="341" data-tchmi-height-unit="px" data-tchmi-left="471" data-tchmi-left-unit="px" data-tchmi-top="59" data-tchmi-top-unit="px" data-tchmi-width="377" data-tchmi-width-unit="px" data-tchmi-data-symbol="%s%ADS.PLC1.MAIN.aDatos%/s%" data-tchmi-indirect-write="True" data-tchmi-grid-font-size="14" data-tchmi-show-header="True" data-tchmi-ignore-first-level="True" data-tchmi-header-font-size="14" data-tchmi-row-numbers-start-number="0">
+<script data-tchmi-target-attribute="data-tchmi-columns" type="application/json">
+[
+  {
+    "columnData": "Name",
+    "editable": false,
+    "horizontalAlignment": "Left",
+    "minWidth": 120.0,
+    "minWidthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "verticalAlignment": "Center",
+    "width": 150.0,
+    "widthUnit": "px"
+  },
+  {
+    "columnData": "Value",
+    "editable": true,
+    "horizontalAlignment": "Center",
+    "minWidth": 160,
+    "minWidthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "verticalAlignment": "Center",
+    "width": 180.0,
+    "widthUnit": "px"
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-cell-content-padding" type="application/json">
+{
+  "left": 3,
+  "leftUnit": "px",
+  "right": 3,
+  "rightUnit": "px",
+  "top": 0,
+  "topUnit": "px",
+  "bottom": 0,
+  "bottomUnit": "px"
+}
+</script>
+
+</div>
+<div id="TcHmiDatagrid_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height="341" data-tchmi-height-unit="px" data-tchmi-left="54" data-tchmi-left-unit="px" data-tchmi-top="59" data-tchmi-top-unit="px" data-tchmi-width="260" data-tchmi-width-unit="px" data-tchmi-row-numbers-start-number="0" data-tchmi-indirect-write="True" data-tchmi-data-symbol="%s%ADS.PLC1.MAIN.aDatos%/s%" data-tchmi-header-font-size="14" data-tchmi-grid-font-size="16">
+<script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
+[
+  {
+    "name": "nNumber",
+    "label": "nNumber",
+    "control": "NumericInput",
+    "width": 70,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "editable": true,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center"
+  },
+  {
+    "name": "bBool",
+    "label": "Bool",
+    "control": "CheckBox",
+    "width": 30,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "editable": true,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "sortable": true
+  },
+  {
+    "name": "rValue1",
+    "label": "Value 1",
+    "control": "NumericInput",
+    "width": 90,
+    "widthUnit": "px",
+    "resize": true,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "editable": true,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "format": {
+      "objectType": "Function",
+      "active": true,
+      "fn": "TcHmi.Functions.Beckhoff.GaugeValueFormatter",
+      "fnParams": [
+        {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/Number",
+          "value": 2.0
+        }
+      ]
+    }
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-cell-content-padding" type="application/json">
+{
+  "left": 3,
+  "leftUnit": "px",
+  "right": 3,
+  "rightUnit": "px",
+  "top": 0,
+  "topUnit": "px",
+  "bottom": 0,
+  "bottomUnit": "px"
+}
+</script>
+
+</div>
+<div id="TcHmiButton_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="340" data-tchmi-left-unit="px" data-tchmi-text="Escribir" data-tchmi-top="59" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-font-size="16">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "TcHmiDatagrid_1",
+        "fn": "writePreparedValues",
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="TcHmiButton_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="875" data-tchmi-left-unit="px" data-tchmi-text="Escribir" data-tchmi-top="59" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-font-size="16">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "TcHmiObjectBrowser_1",
+        "fn": "writePreparedValues",
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="TcHmiTextblock_8" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="54" data-tchmi-left-unit="px" data-tchmi-text="Métodos de entrada en arrays usando diferentes controles" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="596" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-font-size="14">
+</div>
+<div id="TcHmiTextblock_9" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="54" data-tchmi-left-unit="px" data-tchmi-text="Acceso en escritura a una posicion del array usando un User Control" data-tchmi-top="441" data-tchmi-top-unit="px" data-tchmi-width="596" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-font-size="14">
+</div>
+<div id="TcHmiSpinboxInput_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiSpinboxInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="54" data-tchmi-left-unit="px" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="489" data-tchmi-top-unit="px" data-tchmi-value="%i%indice|BindingMode=TwoWay%/i%" data-tchmi-width="95" data-tchmi-width-unit="px" data-tchmi-min-value="0" data-tchmi-max-value="9" data-tchmi-value-font-size="18" data-tchmi-value-horizontal-alignment="Center">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onValueChanged",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.Beckhoff.CreateBinding",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:framework#/definitions/Control",
+            "symbolExpression": "%ctrl%UserControl1_1%/ctrl%"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+            "value": "estructura"
+          },
+          {
+            "objectType": "Symbol",
+            "symbolExpression": "%f%TcHmi.Functions.Beckhoff.GetElementByIndex(%s%ADS.PLC1.MAIN.aDatos%/s%, %i%indice%/i%)%/f%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="UserControl1_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="80" data-tchmi-height-unit="px" data-tchmi-left="251" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/UserControl1.usercontrol" data-tchmi-top="489" data-tchmi-top-unit="px" data-tchmi-width="388" data-tchmi-width-unit="px" data-tchmi-indice="%i%indice%/i%" data-tchmi-array="%s%ADS.PLC1.MAIN.aDatos%/s%">
+</div>
+</div>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="MAIN" Id="{472135db-feb8-4ddf-83fe-fef2234cd41d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	bInit		: BOOL := TRUE;
+	i			: INT;
+	aDatos		: ARRAY[0..9] OF ST_Datos;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bInit THEN
+	FOR i:=0 TO 10 DO
+		aDatos[i].rValue1 := i*10.0;
+		aDatos[i].nNumber := i;
+	END_FOR
+	bInit := FALSE;
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
