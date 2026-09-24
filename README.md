@@ -5,6 +5,7 @@ Proyecto de demostración de uso de objetos gráficos para manipular arrays de e
 * **ObjectBrowser**
 
 * **User Control**
-  * Usa las funciones **CreateBinding** conjuntamente con la **GetElementById** para vincularlo dinámicamente a una estructura de datos. Para apuntar a la estructura dentro del array se usa también como parámetro un índice. Para la escritura usa la función SetElementById. 
+  * Usa la función **CreateBindingByIndex()** para vincularlo dinámicamente a una estructura de datos . Para apuntar a la estructura dentro del array se usa también como parámetro un índice.
+  * El segundo método usa las funciones **GetElementByIndex()/SetElementByIndex()** para leer/escribir respectivamente.
 
 ![Captura](Captura01.png)
