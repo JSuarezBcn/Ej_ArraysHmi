@@ -67,7 +67,7 @@
       "name": "data-tchmi-array",
       "displayName": "array",
       "visible": true,
-      "type": "tchmi:server#/definitions/ADS-PLC1.ARRAY_0..9_OF-ST_Datos",
+      "type": "tchmi:server#/definitions/ADS-PLC1.ARRAY_1..100_OF-ST_Datos",
       "category": "",
       "description": "",
       "readOnly": false,

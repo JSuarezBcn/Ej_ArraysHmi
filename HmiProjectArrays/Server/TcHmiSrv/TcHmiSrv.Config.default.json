@@ -37,6 +37,24 @@
                 "minItems": 10,
                 "type": "array"
             },
+            "ADS-PLC1.ARRAY_1..1000_OF-ST_Datos": {
+                "items": {
+                    "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Datos"
+                },
+                "maxItems": 1000,
+                "minItems": 1000,
+                "startOffset": 1,
+                "type": "array"
+            },
+            "ADS-PLC1.ARRAY_1..100_OF-ST_Datos": {
+                "items": {
+                    "$ref": "tchmi:server#/definitions/ADS-PLC1.ST_Datos"
+                },
+                "maxItems": 100,
+                "minItems": 100,
+                "startOffset": 1,
+                "type": "array"
+            },
             "ADS-PLC1.ST_Datos": {
                 "additionalProperties": false,
                 "properties": {
@@ -300,7 +318,7 @@
     "RECORDING_MESSAGE_MAX_LENGTH": 5120,
     "REMOTESERVERS": {},
     "REMOTESERVERS_CERTIFICATES": [],
-    "REQUIREAUTH": 0,
+    "REQUIREAUTH": 1,
     "REQUIRE_CLIENT_CERTIFICATE": false,
     "SAMESITE_ATTRIBUTE": 2,
     "SELFSIGNEDROOTCA": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUQvVENDQXVXZ0F3SUJBZ0lKQUplV0o2M2YrbGVVTUEwR0NTcUdTSWIzRFFFQkN3VUFNRVl4Q3pBSkJnTlYKQkFZVEFrUkZNUnN3R1FZRFZRUUtEQkpVZDJsdVEwRlVJRWhOU1NCVFpYSjJaWEl4R2pBWUJnTlZCQU1NRVVwaApkbWxsY2xNdFRtSXdOVjl5YjI5ME1CNFhEVEkxTVRJd05EQTROVFV6T0ZvWERUSTRNVEl3TkRBeU5UVXpPRm93ClJqRUxNQWtHQTFVRUJoTUNSRVV4R3pBWkJnTlZCQW9NRWxSM2FXNURRVlFnU0UxSklGTmxjblpsY2pFYU1CZ0cKQTFVRUF3d1JTbUYyYVdWeVV5MU9ZakExWDNKdmIzUXdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCRHdBdwpnZ0VLQW9JQkFRQ3NIWUtNWjlIc2ZRRUlGc0VvOFVSd0MzMi8zWXNQMHo1UU9KYmg4U0huQmE1c3hCaWJ0OGFVCkJKUnhYaGlSK2huRkdySFpHOVdEVFdzTmRpU0Y1SWxIU0VvclBrYyswUXhqQTJybU5oQUx5bzBpN0lFSzI2MFMKR054L2VBRzVJVDJZU2NiMm5hMDdralpISTlzMnlrM1VwT041TWczZ0JVZExVcmltUVZqTkZMVVVKVlNPa1BiNwpteE0wanhrUzE3UGFhNWF5K2daaEovVDVNcysvZDN0WVIyK25zcVNMTWNDcUh4SnhSZk5NREdjMWVBMGJtQjN5ClpFK2tOYTUranhKWjZGZmwwWlh1dUt1RmNzeE9yYURzL0RFS3cyUEZNTUhuK0ExWW1zS3ZLVlg4cVpTM2dRSWQKZVU4S1JvK3lHY0k2RHNUZlZVaVBqdGpWZVpHNVQwTEZBZ01CQUFHamdlMHdnZW93Z2JjR0ExVWRFUVNCcnpDQgpySUlKYkc5allXeG9iM04waHdSL0FBQUJoeEFBQUFBQUFBQUFBQUFBQUFBQUFBQUJnZ3hLWVhacFpYSlRMVTVpCk1EV0NHVXBoZG1sbGNsTXRUbUl3TlM1aVpXTnJhRzltWmk1amIyMkhCQW8zQWdtSEJNQ28rQUdIQk1Db09BR0gKQk1Db1VRR0hFUDZBQUFBQUFBQUFKK3VnOGswcFhWMkhFUDZBQUFBQUFBQUFTYUhYdkFmWDI1MkhFUDZBQUFBQQpBQUFBczU4YlJBSnltdjJIRVA2QUFBQUFBQUFBNEpCaEEzakRabkl3SFFZRFZSME9CQllFRlAzZFVYSmFmVmgxCmxKVW9KQmJhK0MzcTlyNWJNQThHQTFVZEV3RUIvd1FGTUFNQkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUIKQURWT1QySFpkL1ZBTHZEVVVRdStJRWFhSllOVGhnWXdVV3RmMzYxOVJFRTdGN0R2a1ZlNFVRV2REaVlHL3ROdQpGVWRBYVFtMnJIYktwdmlmOTF0OFlseUpza1htRmZhVGFTWmV5cFJoT3dhL1hNS1lPNWh4MHI3bUtDZjNpM0xVCkRITzdRY0hKTU4vWG5BYjFBdGpZU1NQZkMwNzNBa0d5TlpoVEI1MU5PcHljOVlHcEdpdG1TWlQyM1FZZG5lV0YKNTJnMk1uZVZ0S051eGR6Z0QxMGU3WlFSOWdzNGZYVzdPb3Z3QndrMGtpOFE0Uk0wQ052cWpBaURhcFlRVGhGZApPT2RxR2tDQ0ZySHg3cVZwUDBVUkhlbWl4N21reHluRnJmbG5Md05kQytHenFydWxBdE5HbXJabDc5MHNTMVNGCjZkRk9vY3I4UWxIYlZWMXhuVnVEQ0J3PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==",
@@ -840,11 +858,12 @@
         },
         "ADS.PLC1.MAIN.aDatos": {
             "ACCESS": 3,
+            "CUSTOMERDATA": "",
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::MAIN::aDatos",
             "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/ADS-PLC1.ARRAY_0..9_OF-ST_Datos"
+                "$ref": "tchmi:server#/definitions/ADS-PLC1.ARRAY_1..100_OF-ST_Datos"
             },
             "USEMAPPING": true
         },
@@ -3856,7 +3875,6 @@
                 "ADS.AdsSyncReadStateReq": 3,
                 "ADS.CheckLicense": 3,
                 "ADS.Diagnostics": 3,
-                "ADS.PLC1.MAIN.aDatos": 3,
                 "ChangeUserSettings": 3,
                 "ConfirmAlarm": 3,
                 "CreateEvent": 3,

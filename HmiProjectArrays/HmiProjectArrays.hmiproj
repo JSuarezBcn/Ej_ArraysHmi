@@ -30,8 +30,9 @@
     <HmiCommunicationRouterPort>10100</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13002</HmiCommunicationServerAuthPort>
     <HmiInitial>14.3.436.1</HmiInitial>
-    <HmiRecent>14.3.436.1</HmiRecent>
+    <HmiRecent>14.3.995.1</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
+    <HmiCommunicationServerPublicPort>3443</HmiCommunicationServerPublicPort>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -127,6 +128,16 @@
   <Target Name="Clean" DependsOnTargets="$(CleanDependsOn)" />
   <Target Name="ReBuild" DependsOnTargets="Clean; Build" />
   <ItemGroup>
+    <Content Include="Content1.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="JS\CreateBindingElementByIndex.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>JS\CreateBindingElementByIndex.js</DependentUpon>
+    </Content>
+    <Content Include="JS\CreateBindingElementByIndex.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="UserControls\Nota.txt">
       <SubType>Content</SubType>
     </Content>
@@ -137,6 +148,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UserControls\UserControl1.usercontrol</DependentUpon>
     </Content>
+    <Content Include="UserControls\UserControl2.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\UserControl2.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>UserControls\UserControl2.usercontrol</DependentUpon>
+    </Content>
     <Folder Include="Fonts\" />
     <Folder Include="Images" />
     <Folder Include="Images\Manifest" />
@@ -145,6 +163,7 @@
     <Folder Include="Imports\Videos" />
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
+    <Folder Include="JS" />
     <Folder Include="UserControls" />
     <Folder Include="Themes" />
     <Folder Include="Themes\Base-Dark\Images\" />

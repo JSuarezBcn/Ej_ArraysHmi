@@ -1,0 +1,81 @@
+{
+  "function": {
+    "name": "CreateBindingElementByIndex",
+    "namespace": "TcHmi.Functions.TcHmiProject1",
+    "displayName": "CreateBindingElementByIndex",
+    "description": "",
+    "waitMode": "Synchronous",
+    "category": "Binding",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String"
+    },
+    "visible": true,
+    "injectContextObject": false,
+    "arguments": [
+      {
+        "name": "ControlId",
+        "displayName": "ControlId",
+        "type": "tchmi:general#/definitions/String",
+        "description": "Control Id attribute",
+        "defaultValue": null,
+        "required": false,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "Index",
+        "displayName": "Index",
+        "type": "tchmi:general#/definitions/String",
+        "description": "Index of array to binding",
+        "defaultValue": null,
+        "required": false,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "ArraySymbolName",
+        "displayName": "ArraySymbolName",
+        "type": "tchmi:general#/definitions/String",
+        "description": "Name of the array symbol",
+        "defaultValue": null,
+        "required": false,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "PropertyName",
+        "displayName": "ProperyName",
+        "type": "tchmi:general#/definitions/String",
+        "description": "Name of the property to binding",
+        "defaultValue": null,
+        "required": false,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      }
+    ]
+  },
+  "$schema": "./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.319/runtimes/native1.12-tchmi/Schema/FunctionDescription.Schema.json",
+  "apiVersion": 1,
+  "version": {
+    "full": "0.0.0.0",
+    "major": 0,
+    "minor": 0,
+    "revision": 0,
+    "build": 0
+  },
+  "dependencyFiles": [
+    {
+      "name": "CreateBindingArrayElement.js",
+      "type": "JavaScript",
+      "description": ""
+    }
+  ]
+}

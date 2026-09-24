@@ -55,14 +55,31 @@
       "name": "Fonts/Fonts.css",
       "description": "",
       "type": "Stylesheet"
+    },
+    {
+      "name": "JS/CreateBindingElementByIndex.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
   "userControls": [
     {
       "url": "UserControls/UserControl1.usercontrol"
+    },
+    {
+      "url": "UserControls/UserControl2.usercontrol"
     }
   ],
-  "content": [],
+  "controls": [],
+  "content": [
+    {
+      "url": "Content1.content",
+      "preload": false,
+      "keepAlive": true,
+      "loadSync": false,
+      "preloadBindings": false
+    }
+  ],
   "views": [
     {
       "url": "Desktop.view",
@@ -71,7 +88,11 @@
       "preloadBindings": false
     }
   ],
-  "userFunctions": [],
+  "userFunctions": [
+    {
+      "url": "JS/CreateBindingElementByIndex.js"
+    }
+  ],
   "symbols": {
     "internal": {
       "indice": {
@@ -82,7 +103,8 @@
       }
     },
     "themedResources": {},
-    "timer": {}
+    "timer": {},
+    "package": {}
   },
   "intervals": {},
   "trigger": [],
@@ -106,15 +128,24 @@
   "packages": [
     {
       "name": "Beckhoff.TwinCAT.HMI.Controls",
-      "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
+      "basePath": "/Beckhoff.TwinCAT.HMI.Controls",
+      "symbols": {
+        "package": {}
+      }
     },
     {
       "name": "Beckhoff.TwinCAT.HMI.Framework",
-      "basePath": "/Beckhoff.TwinCAT.HMI.Framework"
+      "basePath": "/Beckhoff.TwinCAT.HMI.Framework",
+      "symbols": {
+        "package": {}
+      }
     },
     {
       "name": "Beckhoff.TwinCAT.HMI.Functions",
-      "basePath": "/Beckhoff.TwinCAT.HMI.Functions"
+      "basePath": "/Beckhoff.TwinCAT.HMI.Functions",
+      "symbols": {
+        "package": {}
+      }
     }
   ],
   "keyboardLayouts": [
